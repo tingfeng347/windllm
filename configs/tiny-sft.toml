@@ -1,0 +1,23 @@
+[model]
+dim = 64
+n_layers = 2
+n_heads = 4
+n_kv_heads = 2
+hidden_dim = 176
+max_seq_len = 128
+
+[train]
+steps = 60
+batch_size = 4
+grad_accum = 1
+learning_rate = 0.0003
+min_lr_ratio = 0.1
+warmup_steps = 5
+weight_decay = 0.01
+grad_clip = 1.0
+eval_every = 20
+eval_batches = 10
+save_every = 30
+log_every = 10
+seed = 42
+cpu_threads = 2
